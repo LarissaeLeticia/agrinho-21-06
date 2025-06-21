@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Título -->
+  <title>Receitas | Do Campo à Cidade</title>
+
+  <!-- Ícone -->
+  <link rel="icon" href="./icons/icon.png" />
+
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="./styles/standard.css" />
+  <link rel="stylesheet" href="./styles/standard-resp.css" />
+  <link rel="stylesheet" href="./styles/history.css" />
+
+  <!-- Estilos específicos para receitas e botão topo -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .intro-receitas {
+      font-size: 24px;
+      text-align: justify;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .receita {
+      display: flex;
+      align-items: flex-start;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      border: 2px solid #dcdcdc;
+      border-radius: 8px;
+      font-size: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      gap: 20px;
+    }
+
+    .receita img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .receita-texto {
+      flex: 1;
+    }
+
+    h3.emoji {
+      color: #388e3c;
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    h4 {
+      color: #008000;
+      margin-top: 25px;
+      font-size: 22px;
+    }
+
+    .intro {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 850px) {
+      .receita {
+        flex-direction: column;
+        max-width: 90%;
+      }
+
+      .receita img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Estilo do botão "Ir ao topo" fixo no canto inferior direito */
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #39eb0c;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+      display: none;
+    }
+
+    #btnTopo:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    // Função para voltar ao topo com efeito suave
+    function backToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Mostrar ou esconder botão dependendo da rolagem
+    window.onscroll = function () {
+      const btn = document.getElementById("btnTopo");
+      if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+      ) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+  </script>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header-anim">
+    <div class="div__header--itens">
+      <img
+        class="img__header--logo img__header--logo-anim"
+        onclick="backToTop()"
+        src="./icons/logo.png"
+        alt="Desenho de uma flor em um vaso estampado numa maleta marrom"
+      />
+      <h6>Receitas do Interior do Paraná</h6>
+      <nav class="nav__header--textos nav__header--textos-anim">
+        <a class="a__header--texto a__header--texto-anim" href="./index.html"
+          >Início</a
+        >
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo das Receitas -->
+  <section id="receitas">
+    <div class="intro-receitas">
+      <p>
+        Sabores do interior do Paraná para sua mesa. Receitas tradicionais feitas com ingredientes simples e muito carinho. Pratos que trazem o conforto da roça e a memória das famílias, perfeitos para quem gosta de cozinhar com alma e sabor.
+      </p>
+    </div>
+
+    <!-- Receita 1 -->
+    <div class="receita">
+      <img src="./assets/bolodemilho.jpeg" alt="Bolo de Milho Verde" />
+      <div class="receita-texto">
+        <h3 class="emoji">Bolo de Milho Verde</h3>
+        <p class="intro">
+          Receitas com ingredientes do campo, com foco na simplicidade, sabor e
+          tradição.
+        </p>
+        <h4>Ingredientes:</h4>
+        <ul>
+          <li>2 xícaras de milho verde (pode ser direto da espiga)</li>
+          <li>1 xícara de leite</li>
+          <li>1 xícara de açúcar</li>
+          <li>3 ovos</li>
+          <li>½ xícara de óleo</li>
+          <li>1 xícara de fubá</li>
+          <li>1 colher (sopa) de fermento em pó</li>
+        </ul>
+        <h4>Modo de preparo:</h4>
+        <ol>
+          <li>Bata no liquidificador o milho, leite, ovos, óleo e açúcar.</li>
+          <li>Adicione o fubá e o fermento. Misture bem.</li>
+          <li>Coloque em forma untada e leve ao forno a 180°C por 35 a 40 minutos.</li>
+          <li>Sirva com café fresco.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Receita 2 -->
+    <div class="receita">
+      <img src="./assets/pao-de-milho-.jpg" alt="Pão de Milho Caseiro" />
+      <div class="receita-texto">
+        <h3 class="emoji">Pão de Milho Caseiro</h3>
+        <p class="intro">
+          Um pão simples, feito com farinha de milho, perfeito para acompanhar um
+          café da manhã na roça.
+        </p>
+        <h4>Ingredientes:</h4>
+        <ul>
+          <li>2 xícaras de farinha de milho</li>
+          <li>1 xícara de farinha de trigo</li>
+          <li>1 colher (sopa) de fermento biológico seco</li>
+          <li>1 colher (sopa) de açúcar</li>
+          <li>1 colher (chá) de sal</li>
+          <li>1 xícara de leite morno</li>
+          <li>2 colheres (sopa) de óleo</li>
+          <li>1 ovo</li>
+        </ul>
+        <h4>Modo de preparo:</h4>
+        <ol>
+          <li>Misture os ingredientes secos.</li>
+          <li>Acrescente o leite, óleo e ovo, sove até formar uma massa macia.</li>
+          <li>Deixe crescer por 1 hora.</li>
+          <li>Modele o pão, coloque em forma untada e asse em forno médio (180ºC)
+            por 40 minutos.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Receita 3 -->
+    <div class="receita">
+      <img src="./assets/pao-de-queijo.jpg" alt="Pão de Queijo com Polvilho Azedo" />
+      <div class="receita-texto">
+        <h3 class="emoji">Pão de Queijo com Polvilho Azedo</h3>
+        <p class="intro">
+          Receita tradicional perfeita para o café da manhã ou lanche da tarde no
+          interior.
+        </p>
+        <h4>Ingredientes:</h4>
+        <ul>
+          <li>3 xícaras de polvilho azedo</li>
+          <li>1 xícara de leite</li>
+          <li>1/2 xícara de óleo</li>
+          <li>2 ovos</li>
+          <li>1 ½ xícara de queijo minas curado ralado</li>
+          <li>Sal a gosto</li>
+        </ul>
+        <h4>Modo de preparo:</h4>
+        <ol>
+          <li>Ferva o leite com o óleo e escalde o polvilho.</li>
+          <li>Adicione os ovos e o queijo, misture bem.</li>
+          <li>Modele e asse a 200°C até dourar.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Receita 4 -->
+    <div class="receita">
+      <img src="./assets/vaca-atolada.jpg" alt="Vaca Atolada (com mandioca)" />
+      <div class="receita-texto">
+        <h3 class="emoji">Vaca Atolada (com mandioca)</h3>
+        <p class="intro">
+          Receita tradicional do interior, perfeita para dias frios, unindo sabor e
+          simplicidade.
+        </p>
+        <h4>Ingredientes:</h4>
+        <ul>
+          <li>1 kg de costela bovina</li>
+          <li>500g de mandioca em pedaços</li>
+          <li>Alho, cebola, cheiro-verde, pimenta-do-reino e sal</li>
+          <li>Tomate e pimentão picados</li>
+          <li>Água quente para o cozimento</li>
+        </ul>
+        <h4>Modo de preparo:</h4>
+        <ol>
+          <li>Refogue a costela com os temperos.</li>
+          <li>Adicione a mandioca e cozinhe tudo na pressão até ficar macio e cremoso.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Receita 5 -->
+    <div class="receita">
+      <img src="./assets/quibibe.jpg" alt="Quibebe de Abóbora Cabotiá" />
+      <div class="receita-texto">
+        <h3 class="emoji">Quibebe de Abóbora Cabotiá</h3>
+        <p class="intro">
+          Receita cremosa e saborosa, perfeita para pratos aconchegantes do interior.
+        </p>
+        <h4>Ingredientes:</h4>
+        <ul>
+          <li>500g de abóbora cabotiá em cubos</li>
+          <li>1 colher de manteiga</li>
+          <li>1/2 cebola picada</li>
+          <li>Sal, pimenta-do-reino e cheiro-verde</li>
+        </ul>
+        <h4>Modo de preparo:</h4>
+        <ol>
+          <li>Refogue a cebola na manteiga.</li>
+          <li>Junte a abóbora e deixe cozinhar até desmanchar.</li>
+          <li>Amasse e sirva cremoso.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão fixo para ir ao topo -->
+  <button id="btnTopo" onclick="backToTop()" aria-label="Ir ao topo">⬆ Ir ao topo</button>
+
+</body>
+
+</html>

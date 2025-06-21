@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "assets"
+		},
+		{
+			"path": "icons"
+		},
+		{
+			"path": "percurso"
+		},
+		{
+			"path": "scripts"
+		},
+		{
+			"path": "styles"
+		}
+	]
+}

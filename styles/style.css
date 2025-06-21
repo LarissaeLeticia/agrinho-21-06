@@ -1,0 +1,7 @@
+h1 {
+    text-align: center;
+     background-color: green;
+  color: white(8, 8, 8); /* Para o texto ficar legível */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas (opcional) */
+}
